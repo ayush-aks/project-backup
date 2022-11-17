@@ -1,6 +1,6 @@
 import { IconButton, Stack, Typography, useTheme } from "@mui/material";
 import React, { useState } from "react";
-import { AiFillLike, AiOutlineLike } from "react-icons/ai";
+import { BiUpvote } from "react-icons/bi";
 import { IconContext } from "react-icons/lib";
 import { useNavigate } from "react-router-dom";
 import { isLoggedIn } from "../helpers/authHelper";
@@ -27,10 +27,10 @@ const LikeBox = (props) => {
       <IconButton sx={{ padding: 0.5 }} onClick={handleLike}>
         {liked ? (
           <IconContext.Provider value={{ color: theme.palette.primary.main }}>
-            <AiFillLike />
+            <BiUpvote />
           </IconContext.Provider>
         ) : (
-          <AiOutlineLike />
+          <BiUpvote />
         )}
       </IconButton>
       <Typography>{likeCount}</Typography>
