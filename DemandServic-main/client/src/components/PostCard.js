@@ -186,15 +186,16 @@ const PostCard = (props) => {
               ))}
 
             <HorizontalStack sx={{ mt: 1 }}>
-          
+            <AiFillMessage />
               <Typography
                 variant="subtitle2"
                 color="text.secondary"
                 sx={{ fontWeight: "bold" }}
               >
+                {post.commentCount}
               </Typography>
               {/* show location name here */}
-              <h6>location</h6>
+              {/* <h6>location</h6> */}
               
             </HorizontalStack>
           </PostContentBox>
