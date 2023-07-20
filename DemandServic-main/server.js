@@ -41,7 +41,7 @@ app.use(cors());
 app.use("/api/posts", posts);
 app.use("/api/users", users);
 app.use("/api/comments", comments);
-//msg,cmnt
+//msg,cmnt -> Use /api/message and use websocket to build chat module
 
 if (process.env.NODE_ENV == "production") {
   app.use(express.static(path.join(__dirname, "/client/build")));
